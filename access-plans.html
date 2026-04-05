@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | VIP Gateway</title>
+    <!-- Global styles + FontAwesome -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="access-plans.css">
+    <!-- Global JS (core controller) -->
+    <script src="global.js" defer></script>
+    <!-- Page-specific JS -->
+    <script src="access-plans.js" defer></script>
+</head>
+<body>
+    <div class="main-content plans-container">
+        <h1><i class="fas fa-crown"></i> Access Plans / ایکسیس پلانز</h1>
+
+        <!-- Plan Cards (Vertical Stack: Premium → Standard → Basic) -->
+        <div class="plans-stack">
+            <!-- Premium Plan (Top) -->
+            <div class="plan-card premium">
+                <div class="ribbon">🔥 MOST POPULAR</div>
+                <div class="plan-header">
+                    <h2>PREMIUM</h2>
+                    <div class="price">33,000 PKR</div>
+                    <div class="duration"><i class="fas fa-clock"></i> 72 Hours Access</div>
+                </div>
+                <button class="select-plan-btn" data-plan="premium">SELECT PLAN</button>
+            </div>
+
+            <!-- Standard Plan (Middle) -->
+            <div class="plan-card standard">
+                <div class="plan-header">
+                    <h2>STANDARD</h2>
+                    <div class="price">22,000 PKR</div>
+                    <div class="duration"><i class="fas fa-clock"></i> 24 Hours Access</div>
+                </div>
+                <button class="select-plan-btn" data-plan="standard">SELECT PLAN</button>
+            </div>
+
+            <!-- Basic Plan (Bottom) -->
+            <div class="plan-card basic">
+                <div class="plan-header">
+                    <h2>BASIC</h2>
+                    <div class="price">3,000 PKR</div>
+                    <div class="duration"><i class="fas fa-clock"></i> 1 Hour Access</div>
+                </div>
+                <button class="select-plan-btn" data-plan="basic">SELECT PLAN</button>
+            </div>
+        </div>
+
+        <!-- Key Activation Section -->
+        <div class="activation-section">
+            <h3><i class="fas fa-key"></i> Activate Intelligence Key / انٹیلیجنس کی ایکٹیویٹ کریں</h3>
+            <div class="bilingual guide">
+                <span class="english-text">Enter your 33, 44, or 55 character key (Basic/Standard/Premium).</span>
+                <span class="urdu-text">اپنی 33، 44، یا 55 حروف کی کلید درج کریں (بنیادی/معیاری/پریمیم)۔</span>
+            </div>
+            <div class="key-input-group">
+                <input type="text" id="accessKeyInput" placeholder="Paste your key here...">
+                <button id="activateKeyBtn" class="btn-primary">VERIFY & ACTIVATE</button>
+            </div>
+        </div>
+
+        <!-- Review Engine -->
+        <div class="reviews-section">
+            <h2><i class="fas fa-star"></i> Community Intelligence / کمیونٹی انٹیلیجنس</h2>
+            <div class="bilingual note">
+                <span class="english-text">Only VIP members can post reviews.</span>
+                <span class="urdu-text">صرف وی آئی پی ممبران ہی ریویو دے سکتے ہیں۔</span>
+            </div>
+            <div id="reviewsFeed" class="reviews-feed">
+                <!-- Reviews will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer and floating elements auto-injected by global.js -->
+</body>
+</html>
