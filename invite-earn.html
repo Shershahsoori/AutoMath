@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PeshoX Intelligence | Invite & Earn</title>
+    <!-- Global styles + FontAwesome -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="invite-earn.css">
+    <!-- Global JS (core controller) -->
+    <script src="global.js" defer></script>
+    <!-- Page-specific JS -->
+    <script src="invite-earn.js" defer></script>
+</head>
+<body>
+    <div class="main-content invite-container">
+        <div class="invite-card">
+            <h1><i class="fas fa-chart-line"></i> Invite & Earn / انوائٹ کریں اور کمائیں</h1>
+
+            <!-- Progress Tracker -->
+            <div class="progress-section">
+                <div class="bilingual">
+                    <span class="english-text">Verification Progress / تصدیق کی پیشرفت</span>
+                    <span class="urdu-text">تصدیق کی پیشرفت</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                </div>
+                <div class="progress-counter" id="progressCounter">Shares: 0 / 5</div>
+                <div class="bilingual note">
+                    <span class="english-text">Share with 5 friends to unlock your 5,000 PKR Verification Bonus.</span>
+                    <span class="urdu-text">اپنا 5,000 PKR تصدیقی بونس حاصل کرنے کے لیے 5 دوستوں کے ساتھ شیئر کریں۔</span>
+                </div>
+            </div>
+
+            <!-- Locked Chest Icon (unlocks at 5/5) -->
+            <div class="chest-container" id="chestContainer">
+                <i class="fas fa-box" id="chestIcon"></i>
+                <span id="chestText" class="chest-text">Locked</span>
+            </div>
+
+            <!-- Share Actions -->
+            <div class="share-actions">
+                <button id="whatsappShareBtn" class="whatsapp-share">
+                    <i class="fab fa-whatsapp"></i> SHARE ON WHATSAPP / واٹس ایپ پر شیئر کریں
+                </button>
+                <button id="copyLinkBtn" class="btn-secondary">
+                    <i class="fas fa-copy"></i> COPY REFERRAL LINK
+                </button>
+            </div>
+
+            <!-- Cooldown Timer (hidden initially) -->
+            <div id="cooldownArea" class="cooldown-area" style="display: none;">
+                <div class="bilingual">
+                    <span class="english-text">Next share available in:</span>
+                    <span class="urdu-text">اگلی شیئر دستیاب ہوگی:</span>
+                </div>
+                <div id="cooldownTimer" class="cooldown-timer">00:00:00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer and floating elements auto-injected by global.js -->
+</body>
+</html>
