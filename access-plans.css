@@ -1,0 +1,154 @@
+/* Access Plans specific styles */
+.plans-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+.plans-container h1 {
+    text-align: center;
+    color: var(--neon-red);
+    margin-bottom: 1.5rem;
+}
+
+/* Plan Cards Stack */
+.plans-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.plan-card {
+    background: var(--bg-card);
+    border-radius: 28px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.plan-card:hover {
+    transform: translateY(-3px);
+}
+/* Premium: cyan glow */
+.plan-card.premium {
+    border: 2px solid #00bfff;
+    background: #001a1f;
+    box-shadow: 0 0 25px rgba(0,191,255,0.4);
+}
+.plan-card.premium .price { color: #00ffff; text-shadow: 0 0 5px cyan; }
+.ribbon {
+    position: absolute;
+    top: 12px;
+    right: -20px;
+    background: #ff4444;
+    color: white;
+    padding: 4px 30px;
+    transform: rotate(45deg);
+    font-size: 0.7rem;
+    font-weight: bold;
+    z-index: 1;
+}
+/* Standard: gold */
+.plan-card.standard {
+    border: 1px solid #ffd700;
+    background: #1a1500;
+    box-shadow: 0 0 15px rgba(255,215,0,0.3);
+}
+.plan-card.standard .price { color: #ffd700; text-shadow: 0 0 3px gold; }
+/* Basic: silver */
+.plan-card.basic {
+    border: 1px solid #aaa;
+    background: #111;
+}
+.plan-card.basic .price { color: #ccc; }
+.plan-header h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.price { font-size: 1.8rem; font-weight: bold; margin: 0.5rem 0; }
+.duration { font-size: 0.9rem; color: #bbb; }
+.select-plan-btn {
+    background: #333;
+    margin-top: 1rem;
+    width: 60%;
+}
+.plan-card.premium .select-plan-btn { background: #00bfff; color: black; }
+.plan-card.standard .select-plan-btn { background: #ffd700; color: black; }
+.plan-card.basic .select-plan-btn { background: #888; }
+
+/* Activation Section */
+.activation-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border-red);
+    border-radius: 28px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.key-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+.key-input-group input { flex: 2; min-width: 200px; }
+
+/* Reviews Section */
+.reviews-section {
+    background: #0a0a0acc;
+    border: 1px solid var(--border-red);
+    border-radius: 28px;
+    padding: 1.5rem;
+}
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--neon-red);
+}
+.note {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: #ff8888;
+}
+.reviews-feed {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.review-card {
+    background: #0f0f0f;
+    border-left: 3px solid var(--neon-red);
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+}
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+}
+.reviewer-name { font-weight: bold; color: #ff8888; }
+.review-badge {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #333;
+}
+.review-badge.premium { background: #00bfff; color: black; }
+.review-badge.standard { background: #ffd700; color: black; }
+.review-badge.basic { background: #888; color: white; }
+.review-stars { color: #ffaa00; letter-spacing: 2px; }
+.review-text { margin: 0.5rem 0; font-size: 0.85rem; }
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    color: #aaa;
+}
+.like-btn, .comment-btn {
+    background: none;
+    border: none;
+    color: #ff6666;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+}
+.like-btn:hover, .comment-btn:hover { color: #ff0000; }
